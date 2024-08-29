@@ -1,3 +1,4 @@
+import { UserFavoriteFoods } from "./UserFavoriteFoods"
 
 
 export const UserProfile = () =>{
@@ -9,6 +10,7 @@ export const UserProfile = () =>{
                 <span>Email:</span>
                 <span>yuran@gmail.com</span>
             </div>
+            <UserFavoriteFoods/>
     </section>
 
     )
