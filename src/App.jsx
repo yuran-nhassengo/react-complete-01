@@ -1,11 +1,35 @@
-import { UserProfile } from "./components/UserProfile"
+
 
 
 export const App = () => {
 
-    return <div>
-        <h1>Root Component</h1>
-        <UserProfile age={21} username ="Yuran"/>
-    </div>
+    const mockUsers = [
 
+        {
+            id: 1,
+            username: "yuran",
+            email:"yuran@gmail.com",
+        },
+        {
+            id: 2,
+            username:"oscar",
+            email:"oscar@gmail.com",
+        },
+    ];
+
+    return (
+        
+        <div>
+            {mockUsers.map(
+                (user) => {
+                    return (
+                        <div>
+                            <b>Username:</b><span>{user.username}</span><br/>
+                            <b>Email:</b><span>{user.email}</span>
+                        </div>
+                    )
+                }
+            )}
+        </div>
+)
 }
