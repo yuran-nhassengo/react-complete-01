@@ -24,7 +24,7 @@ export const App = () => {
             {mockUsers.map(
                 (user) => {
                     return (
-                        <UserDetails key={user.id} username={user.username} email={user.email}/>
+                        <UserDetails key={user.id} user={user}/>
                     )
                 }
             )}

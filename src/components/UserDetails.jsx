@@ -1,13 +1,22 @@
 import React from 'react'
 
-export const UserDetails = ({username,email}) => {
+import Prototype from 'prop-types'
+
+export const UserDetails = ({user}) => {
   return (
     <>
       <div >
-            <b>Username:</b><span>{username}</span><br/>
-            <b>Email:</b><span>{email}</span>
+            <b>Username:</b><span>{user.username}</span><br/>
+            <b>Email:</b><span>{user.email}</span>
       </div>
     </>
   )
 }
 
+UserDetails.prototype ={
+    user: Prototype.shape({
+        username: Prototype.string.isRequired,
+        email: Prototype.string.isRequired,
+    }
+    )
+}
