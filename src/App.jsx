@@ -1,19 +1,11 @@
-import { UserDetails } from "./components/UserDetails";
+
 
 
 
 export const App = () => {
 
-    const isAuthenticated = true;
+    const isAuthenticated = false;
     
-    if (isAuthenticated){
-        return (
-            <div>Welcome, User</div>
-        );
-    }
-
-    return (
-        <div>You are not logged in</div>
-    )
+    return isAuthenticated ? <div>Welcome, User</div> : <div>You are not logged in</div>
   
 }
