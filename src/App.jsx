@@ -4,30 +4,16 @@ import { UserDetails } from "./components/UserDetails";
 
 export const App = () => {
 
-    const mockUsers = [
-
-        {
-            id: 1,
-            username: "yuran",
-            email:"yuran@gmail.com",
-        },
-        {
-            id: 2,
-            username:"oscar",
-            email:"oscar@gmail.com",
-        },
-    ];
+    const isAuthenticated = true;
+    
+    if (isAuthenticated){
+        return (
+            <div>Welcome, User</div>
+        );
+    }
 
     return (
-        
-        <div>
-            {mockUsers.map(
-                (user) => {
-                    return (
-                        <UserDetails key={user.id} user={user}/>
-                    )
-                }
-            )}
-        </div>
-)
+        <div>You are not logged in</div>
+    )
+  
 }
